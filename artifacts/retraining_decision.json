@@ -1,8 +1,7 @@
 {
   "retrained": true,
   "reasons": [
-    "Prediction PSI 0.437 exceeds 0.20",
-    "Drifted feature share 64.1% exceeds 30%",
+    "Drifted feature share 59.0% exceeds 30%",
     "Evidently detected dataset drift"
   ],
   "model_name": "Advanced_XGBoost",

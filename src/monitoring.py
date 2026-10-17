@@ -12,6 +12,21 @@ import joblib
 import numpy as np
 import json
 
+def load_scored_batches():
+    """Load the reference/current batches and their predicted readmission probabilities."""
+    artifacts = cfg.ARTIFACT_DIR
+    input_columns = json.loads(
+        (artifacts / "input_columns.json").read_text(encoding="utf-8")
+    )
+    reference = pd.read_csv(artifacts / "reference_sample.csv")
+    current = pd.read_csv(artifacts / "current_batch.csv")
+    model = joblib.load(artifacts / "best_model.pkl")
+
+    reference_scores = model.predict_proba(reference[input_columns])[:, 1]
+    current_scores = model.predict_proba(current[input_columns])[:, 1]
+    return reference, current, reference_scores, current_scores
+
+
 def run_monitoring():
     """TODO (Stage 4.4):
     - Load artifacts/reference_sample.csv (training baseline) and artifacts/current_batch.csv.
@@ -22,13 +37,7 @@ def run_monitoring():
     - Write artifacts/drift_summary.json and return the summary dict.
     Expected (reference run): ~6/39 features drifted, dataset_drift False, prediction PSI ~0.46."""
 
-    # Load artifacts/reference_sample.csv (training baseline) and artifacts/current_batch.csv
-    reference_path = cfg.ARTIFACT_DIR / "reference_sample.csv"
-    current_path = cfg.ARTIFACT_DIR / "current_batch.csv"
-
-    reference = pd.read_csv(reference_path)
-    current = pd.read_csv(current_path)
-
+    reference, current, reference_scores, current_scores = load_scored_batches()
     artifacts = cfg.ARTIFACT_DIR
     input_columns = json.loads(
         (artifacts / "input_columns.json").read_text(encoding="utf-8")
@@ -71,11 +80,6 @@ def run_monitoring():
     
     # Prediction drift: load artifacts/best_model.pkl and compute the PSI between the reference and
     # current predicted probabilities.
-
-    model = joblib.load(artifacts / "best_model.pkl")
-
-    reference_scores = model.predict_proba(reference[input_columns])[:, 1]
-    current_scores = model.predict_proba(current[input_columns])[:, 1]
 
     # Use identical bins for both score distributions.
     bins = np.linspace(0.0, 1.0, 11)

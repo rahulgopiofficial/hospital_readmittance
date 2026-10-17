@@ -1,6 +1,6 @@
 {
-  "number_of_drifted_columns": 25,
+  "number_of_drifted_columns": 23,
   "number_of_columns": 39,
   "dataset_drift": true,
-  "prediction_psi": 0.43689810954600056
+  "prediction_psi": 0.0829357693696042
 }
