@@ -1,0 +1,10 @@
+.venv/
+data/
+mlruns/
+mlflow.db
+__pycache__/
+.ipynb_checkpoints/
+.pytest_cache/
+.DS_Store
+mcp-server.log
+artifacts/predictions.log

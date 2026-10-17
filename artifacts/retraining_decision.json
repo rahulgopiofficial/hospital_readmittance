@@ -1,0 +1,17 @@
+{
+  "retrained": true,
+  "reasons": [
+    "Prediction PSI 0.437 exceeds 0.20",
+    "Drifted feature share 64.1% exceeds 30%",
+    "Evidently detected dataset drift"
+  ],
+  "model_name": "Advanced_XGBoost",
+  "metrics": {
+    "roc_auc": 0.626,
+    "pr_auc": 0.158,
+    "f1": 0.2118,
+    "recall": 0.4319,
+    "precision": 0.1403,
+    "accuracy": 0.7118
+  }
+}

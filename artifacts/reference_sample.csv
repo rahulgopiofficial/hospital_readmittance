@@ -1,0 +1,11 @@
+race,gender,age,admission_type_id,discharge_disposition_id,admission_source_id,time_in_hospital,medical_specialty,num_lab_procedures,num_procedures,num_medications,number_outpatient,number_emergency,number_inpatient,diag_1,diag_2,diag_3,number_diagnoses,max_glu_serum,A1Cresult,metformin,repaglinide,nateglinide,chlorpropamide,glimepiride,glipizide,glyburide,pioglitazone,rosiglitazone,acarbose,miglitol,tolazamide,insulin,glyburide-metformin,glipizide-metformin,change,diabetesMed,service_utilization,num_med_changes
+AfricanAmerican,Female,25,1,1,7,7,Other,47,1,24,0,0,0,Diabetes,Circulatory,Other,9,,Norm,No,No,Steady,No,No,No,No,No,Steady,No,No,No,Steady,No,No,Ch,Yes,0,0
+Caucasian,Male,65,3,1,1,1,Other,32,2,12,1,0,0,Circulatory,Circulatory,Other,5,,,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,1,0
+AfricanAmerican,Male,75,3,3,1,13,Other,51,0,7,0,0,0,Other,Other,Diabetes,7,,,No,No,No,No,Steady,No,No,No,No,No,No,No,No,No,No,No,Yes,0,0
+Caucasian,Female,55,1,1,7,2,Other,43,1,20,0,0,4,Circulatory,Circulatory,Circulatory,9,,,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,4,0
+Caucasian,Female,75,1,3,4,2,Other,1,0,14,0,0,0,Circulatory,Diabetes,Other,9,,,No,No,No,No,No,No,No,No,No,No,No,No,Down,No,No,Ch,Yes,0,1
+Caucasian,Male,85,1,4,1,13,Other,52,3,38,0,0,0,Other,Other,Other,9,,,Steady,No,No,No,No,Steady,No,No,No,No,No,No,Steady,No,No,Ch,Yes,0,0
+Caucasian,Female,85,1,3,7,2,Other,1,0,26,0,0,0,Respiratory,Respiratory,Diabetes,7,,,Steady,No,No,No,No,Steady,No,Steady,No,No,No,No,Steady,No,No,Ch,Yes,0,0
+Caucasian,Female,35,1,1,7,5,InternalMedicine,79,1,18,0,0,0,Other,Other,Diabetes,4,,Norm,Steady,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,Yes,0,0
+Caucasian,Female,85,1,1,7,9,Emergency/Trauma,61,1,14,0,0,0,Other,Respiratory,Other,9,,,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,0,0
+Other,Female,65,2,1,1,4,InternalMedicine,47,0,7,0,1,1,Diabetes,Other,Other,9,,>8,No,No,No,No,No,No,No,Steady,No,No,No,No,No,No,No,No,Yes,2,0
